@@ -16,9 +16,11 @@ return new class extends Migration
             $table->string('project_name');
             $table->string('location')->nullable();
             $table->json('keywords')->nullable();
-             $table->timestamps();
-            
+            $table->timestamps();
+            $table->unsignedBigInteger('fyp_group_id');
+            $table->unsignedBigInteger('user_id');
             $table->foreign('fyp_group_id')->references('id')->on('fyp_groups')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

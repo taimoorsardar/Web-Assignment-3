@@ -67,5 +67,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(AdminAccount::class);
     }
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
 
 }

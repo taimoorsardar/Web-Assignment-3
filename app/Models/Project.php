@@ -14,10 +14,6 @@ class Project extends Model
         'fyp_group_id', 'project_name', 'location', 'keywords',
     ];
 
-    public function fypGroup()
-    {
-        return $this->belongsTo(FYPGroup::class, 'fyp_group_id');
-    }
 
     public function evaluations()
     {

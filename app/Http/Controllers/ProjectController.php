@@ -11,7 +11,9 @@ class ProjectController extends Controller
     public function show($id)
     {
         $project = Project::findOrFail($id); // Fetch project by ID
-        return view('project.view', compact('project'));
+        $evaluatorsCount = $project->evaluatorsCount; 
+
+        return view('project.view', compact('project','evaluatorsCount'));
     }
 
     public function edit($id)

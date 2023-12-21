@@ -18,4 +18,8 @@ class Project extends Model
     {
         return $this->hasMany(ProjectEvaluation::class);
     }
+
+    public function getEvaluatorsCountAttribute(){
+        return $this->evaluations()->count(); 
+    }
 }

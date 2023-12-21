@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('contact_number')->nullable();
 
             //Define foreign key contraints for user_id referencing the users table
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->where('role','admin')->onDelete('cascade');
             
             $table->timestamps();
         });

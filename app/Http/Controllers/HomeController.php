@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index(){
         if (Auth::id()){
-            $usertype =Auth()->user()->usertype;
+             $usertype =Auth()->user()->usertype;
             if ($usertype == 'student'){
                 return view('dashboard');
             }

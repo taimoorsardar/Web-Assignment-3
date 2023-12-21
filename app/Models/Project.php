@@ -14,7 +14,6 @@ class Project extends Model
         'fyp_group_id', 'project_name', 'location', 'keywords',
     ];
 
-
     public function evaluations()
     {
         return $this->hasMany(ProjectEvaluation::class);

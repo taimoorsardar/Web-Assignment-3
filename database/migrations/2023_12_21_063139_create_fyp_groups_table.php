@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('group_name');
             $table->string('project_details')->nullable();
             $table->text('keywords')->nullable();
-            $table->unsigmedBigInteger('admin_id'); //Assuming an admin is associated with each group
+            $table->unsignedBigInteger('admin_id'); //Assuming an admin is associated with each group
 
             $table->foreign('admin_id')->references('id')->on('users')->onDelete('cascade');
 

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('project_id'); //Foreign key referencing the user table
             $table->integer('rating')->nullable();
 
-            $table->foreign('evaluator_id')->references('id')->on('evaluators')->onDelete('cascade');
+            $table->foreign('evaluator_id')->references('id')->on('users')->where('role','evaluator')->onDelete('cascade');
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
             
             $table->timestamps();

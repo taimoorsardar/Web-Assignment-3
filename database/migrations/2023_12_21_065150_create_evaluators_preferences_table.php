@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('preferred_category'); 
             $table->string('specialty_areas');
 
-            $table->foreign('evaluator_id')->references('id')->on('evaluators')->onDelete('cascade');
+            $table->foreign('evaluator_id')->references('id')->on('users')->where('role', 'evaluator')->onDelete('cascade');
             
             $table->timestamps();
         });

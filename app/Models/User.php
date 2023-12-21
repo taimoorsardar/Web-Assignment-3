@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class User extends Authenticatable 
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -21,7 +21,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password',
+        'password','usertype'
     ];
 
     /**
@@ -42,20 +42,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
-    ];
-
-    public function evaluatorPreferences()
-    {
-        return $this->hasOne(EvaluatorPreferences::class);
-    }
-
-}
-
-class User extends Model
-{
-    // Define any guarded or fillable attributes
-    protected $fillable = [
-        'name', 'email', 'password', 'usertype',
     ];
 
     // Relationship: User can be an evaluator for multiple projects
@@ -81,4 +67,5 @@ class User extends Model
     {
         return $this->hasOne(AdminAccount::class);
     }
+
 }

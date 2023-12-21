@@ -1,10 +1,69 @@
-<!-- resources/views/student/dashboard.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Student Dashboard</title>
-    <!-- Add your stylesheets, scripts, and meta tags -->
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Additional dashboard-specific styles */
+        main section {
+            margin-bottom: 20px;
+        }
+
+        main section h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        main section h2 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        main section p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+    <!-- Add your other stylesheets, scripts, and meta tags -->
 </head>
 <body>
     <header>

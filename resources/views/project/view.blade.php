@@ -1,12 +1,10 @@
-<!-- resources/views/project/view.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Project Details</title>
-    <!-- Add your stylesheets, scripts, and meta tags -->
     <style>
-        /* Add your CSS styles here */
+        /* CSS styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -44,6 +42,26 @@
             background-color: #333;
             color: #fff;
         }
+
+        /* Additional project-specific styles */
+        main section {
+            margin-bottom: 20px;
+        }
+
+        main section h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        main section h2 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        main section p {
+            font-size: 16px;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -71,7 +89,6 @@
             <h2>Project Evaluators</h2>
             <p>Evaluators Count: {{ $evaluatorsCount }}</p>
         </section>
-
 
         <!-- Other sections and content -->
 

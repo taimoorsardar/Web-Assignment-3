@@ -14,7 +14,7 @@ class EvaluatorDashboardController extends Controller
     {
         // Logic to retrieve evaluator information and assigned projects
         $evaluator = auth()->user(); // Assuming user is authenticated as evaluator
-        $assignedProjectsCount = $evaluator->assignedProjects()->count(); // Example: Count assigned projects
+        $assignedProjectsCount = $evaluator->projects()->count(); // Example: Count assigned projects
 
         return view('evaluator.evaluator_dashboard', compact('evaluator', 'assignedProjectsCount'));
     }

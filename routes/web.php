@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EvaluatorDashboardController;
 use App\Http\Controllers\StudentDashboardController;
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ Route::middleware('auth')->group(function () {
 });
 //route for student dashboard
 Route::get('/student/dashboard', [StudentDashboardController::class, 'index']);
+Route::get('/evaluator/dashboard', [EvaluatorDashboardController::class, 'index'])->name('evaluator.dashboard');
 
 
 require __DIR__.'/auth.php';

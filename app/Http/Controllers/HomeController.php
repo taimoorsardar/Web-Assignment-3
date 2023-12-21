@@ -10,12 +10,15 @@ class HomeController extends Controller
 {
     public function index(){
         if (Auth::id()){
-             $usertype =Auth()->user()->usertype;
-            if ($usertype == 'student'){
-                return view('dashboard');
+             $role =Auth()->user()->role;
+            if ($role == 'student'){
+                return view('student.dashboard');
             }
-            else if ($usertype == 'admin'){
+            else if ($role == 'admin'){
                 return view('admin.adminhome');
+            }
+            else if ($role == 'evaluator'){
+                return view('evaluator.evaluator_dashboard');
             }
             else {
                 redirect()->back();

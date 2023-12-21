@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EvaluatorDashboardController;
 use App\Http\Controllers\StudentDashboardController;
+use App\Http\Controllers\ProjectController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,6 +35,8 @@ Route::middleware('auth')->group(function () {
 //route for student dashboard
 Route::get('/student/dashboard', [StudentDashboardController::class, 'index']);
 Route::get('/evaluator/dashboard', [EvaluatorDashboardController::class, 'index'])->name('evaluator.dashboard');
+Route::get('/project/{id}', 'ProjectController@show'); // Example route
+
 
 
 require __DIR__.'/auth.php';

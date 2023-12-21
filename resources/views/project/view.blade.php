@@ -66,6 +66,12 @@
             <p>Project Description: {{ $project->description }}</p>
             <!-- Add more project-related details -->
         </section>
+        <!-- Other project details -->
+        <section>
+            <h2>Project Evaluators</h2>
+            <p>Evaluators Count: {{ $evaluatorsCount }}</p>
+        </section>
+
 
         <!-- Other sections and content -->
 

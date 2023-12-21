@@ -35,7 +35,7 @@ Route::middleware('auth')->group(function () {
 //route for student dashboard
 Route::get('/student/dashboard', [StudentDashboardController::class, 'index']);
 Route::get('/evaluator/dashboard', [EvaluatorDashboardController::class, 'index'])->name('evaluator.dashboard');
-Route::get('/project/{id}', 'ProjectController@show'); // Example route
+Route::get('/project/{id}', [ProjectController::class, 'show'])->name('project.show'); // Example route
 
 
 
